@@ -10,8 +10,29 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('HomeView'),
+        title: const Text(
+          'Campus Saga',
+          style: TextStyle(
+              color: Colors.white,
+              fontSize: 30,
+              fontFamily: 'Boogaloo',
+              fontWeight: FontWeight.w400),
+        ),
         centerTitle: true,
+        actions: IconButtonTheme(
+          data: IconButtonThemeData(
+            iconSize: 30,
+            color: Colors.white,
+          ),
+          child: IconButton(
+            icon: const Icon(Icons.settings),
+            onPressed: () {},
+          ),
+        ),
+        leading: IconButton(
+          icon: Icon(Icons.settings),
+          onPressed: () {},
+        ),
       ),
       body: const Center(
         child: Text(
