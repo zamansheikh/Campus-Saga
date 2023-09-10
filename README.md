@@ -51,6 +51,8 @@ English
 
 - No Ads
 
+- Virtual Campus 🤍
+
 - Easy to use and user-friendly.
 
 - [Material Design 3](https://m3.material.io/) style UI, with dynamic color theme.
@@ -65,8 +67,6 @@ For most devices, it is recommended to install the **arm64-v8a** version of the 
 
 - Download the latest stable version from [GitHub releases](https://github.com/zamansheikh/Campus-Saga/releases/latest)
   - Install the [pre-release](https://github.com/zamansheikh/Campus-Saga/releases/) versions to help us test out new features & changes
-
--->
 
 ## 💬 Contact
 

@@ -12,6 +12,13 @@ class HomeView extends GetView<HomeController> {
       appBar: AppBar(
         title: const Text(
           'Campus Saga',
+          style: TextStyle(fontFamily: 'Boogaloo'),
+        ),
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.dark_mode)),
+        ],
+        title: const Text(
+          'Campus Saga',
           style: TextStyle(
               color: Colors.white,
               fontSize: 30,

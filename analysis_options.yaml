@@ -5,6 +5,8 @@
 
 
 # Comment out to disable the Flutter specific analysis rules.
+
+
 # include: package:flutter_lints/flutter.yaml
 
 linter:
