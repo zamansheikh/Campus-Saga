@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  final count = 1.obs;
   RxBool isDark = false.obs;
   @override
   void onInit() {
@@ -18,5 +17,5 @@ class HomeController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
+  
 }

@@ -14,7 +14,6 @@ import '../modules/ranking/bindings/ranking_binding.dart';
 import '../modules/ranking/views/ranking_view.dart';
 import '../modules/sign_up/bindings/sign_up_binding.dart';
 import '../modules/sign_up/views/sign_up_view.dart';
-
 part 'app_routes.dart';
 
 class AppPages {
