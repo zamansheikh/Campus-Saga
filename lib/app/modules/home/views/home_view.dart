@@ -63,27 +63,51 @@ class HomeView extends GetView<HomeController> {
               )
             ],
           ),
-          child: Column(
-            children: [
-              Container(
-                height: 200,
-                width: Get.width,
-                decoration: BoxDecoration(
-                  color: Color.fromRGBO(255, 255, 255, .5),
-                  borderRadius: BorderRadius.all(Radius.circular(15)),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color(0x19000000),
-                      blurRadius: 20,
-                      offset: Offset(0, -5),
-                      spreadRadius: 2,
-                    )
-                  ],
-                ),
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                _cards(),
+                _cards(),
+                _cards(),
+                _cards(),
+                _cards(),
+              ],
+            ),
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _cards() {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 8),
+      alignment: Alignment.topLeft,
+      padding: EdgeInsets.all(10),
+      height: 250,
+      width: Get.width,
+      decoration: BoxDecoration(
+        color: Color.fromRGBO(255, 255, 255, .5),
+        borderRadius: BorderRadius.all(Radius.circular(15)),
+        boxShadow: [
+          BoxShadow(
+            color: Color(0x19000000),
+            blurRadius: 8,
+            offset: Offset(0, 1),
+            spreadRadius: 2,
+          )
+        ],
+      ),
+      child: Row(
+        children: [
+          CircleAvatar(
+            radius: 20,
+            backgroundImage: AssetImage("assets/images/facebook.png"),
+            backgroundColor: Color.fromRGBO(255, 255, 255, .5),
+          ),
+          SizedBox(width: 8),
+          Text('nafiz')
+        ],
       ),
     );
   }
