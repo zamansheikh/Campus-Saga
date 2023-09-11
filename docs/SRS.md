@@ -8,13 +8,21 @@ The purpose of this document is to define the software requirements for the **Ca
 
 ### 1.2 Scope
 
+<<<<<<< HEAD
 The **Campus Saga** app aims to provide a platform for university students to anonymously post and review issues within their respective institutions, interact with university authorities, and engage with promotions or advertisements.
+=======
+The **Campus Saga** app aims to provide a platform for university students to anonymously post and review issues within their respective institutions, interact with university authorities, and engage with promotions or advertisements.The users can view the issues of other universitys if they are not a student of that university.The users who are not varified through their respective institutions id cards, can't post any issues or promotions. 
+>>>>>>> 65942bea6606587d9a68479546a8ac6796987e8e
 
 ## 2. System Overview
 
 ### 2.1 System Description
 
+<<<<<<< HEAD
 The system will consist of a mobile application developed using Flutter and the GetX library. It will follow the Model-View-Controller (MVC) pattern for organization.
+=======
+The system will consist of a mobile application developed using Flutter and the GetX library. It will follow the Model-View-Controller (MVC) pattern for organization, firebase for database managment and authentication.
+>>>>>>> 65942bea6606587d9a68479546a8ac6796987e8e
 
 ### 2.2 Key Features
 
@@ -33,9 +41,20 @@ The system will consist of a mobile application developed using Flutter and the 
 
 #### User Registration:
 
+<<<<<<< HEAD
 - Users must be able to create accounts using their university email addresses.
 - User authentication should be implemented securely.
 
+=======
+- Users must be able to create accounts using their university email addresses/Phone Number.
+- User authentication should be implemented securely.
+
+#### Institute Identification:
+
+- Users must be identified by their student ID cards.
+- Access to features is restricted based on the user's university affiliation.
+
+>>>>>>> 65942bea6606587d9a68479546a8ac6796987e8e
 #### Anonymous Issue Posting:
 
 - Users can post issues related to their university anonymously.
@@ -44,8 +63,12 @@ The system will consist of a mobile application developed using Flutter and the 
 
 #### University Rating:
 
+<<<<<<< HEAD
 - The system will calculate a university rating based on user reviews.
 - Users can submit reviews and rate universities on a scale.
+=======
+- The system will calculate a university rating based on isuue solving period, solved issue ratio, engagement.
+>>>>>>> 65942bea6606587d9a68479546a8ac6796987e8e
 
 #### Interaction with University Authorities:
 
@@ -62,20 +85,32 @@ The system will consist of a mobile application developed using Flutter and the 
 - Users can view advertisements and promotions.
 - A mechanism for posting advertisements must be provided to authorized users.
 
+<<<<<<< HEAD
 #### Institute Identification:
 
 - Users must be identified by their student ID cards.
 - Access to features is restricted based on the user's university affiliation.
+=======
+
+>>>>>>> 65942bea6606587d9a68479546a8ac6796987e8e
 
 ## 4. External Interface Requirements
 
 ### 4.1 User Interfaces
 
+<<<<<<< HEAD
 The app will have user-friendly interfaces for registration, issue posting, issue browsing, rating universities, and interacting with university authorities.
 
 ### 4.2 API Interfaces
 
 The app will interact with external APIs for location services (optional) and authentication.
+=======
+The app will have user-friendly interfaces for registration, issue posting, issue browsing, ranking universities, and interacting with university authorities, user profile.
+
+### 4.2 API Interfaces
+
+The app will interact with external APIs for location services (optional), authentication and user database management.
+>>>>>>> 65942bea6606587d9a68479546a8ac6796987e8e
 
 ## 5. Performance Requirements
 
@@ -102,7 +137,11 @@ The app will interact with external APIs for location services (optional) and au
 ## 9. Assumptions and Dependencies
 
 - The availability of Flutter and GetX libraries for development.
+<<<<<<< HEAD
 - Users have access to valid university email addresses for registration.
+=======
+- Users have access to valid university email addresses/phone number for registration.
+>>>>>>> 65942bea6606587d9a68479546a8ac6796987e8e
 
 ## 10. Appendices
 
@@ -111,7 +150,11 @@ The app will interact with external APIs for location services (optional) and au
 
 ## 11. Review and Approval
 
+<<<<<<< HEAD
 The SRS document will undergo review and approval by stakeholders.
+=======
+The SRS document will undergo review and approval by org:deCodersFamily.
+>>>>>>> 65942bea6606587d9a68479546a8ac6796987e8e
 
 ## 12. Change History
 
@@ -119,4 +162,8 @@ A record of changes made to the SRS document will be maintained.
 
 ## 13. References
 
+<<<<<<< HEAD
 List any external references or standards used in the development process.
+=======
+N/A
+>>>>>>> 65942bea6606587d9a68479546a8ac6796987e8e

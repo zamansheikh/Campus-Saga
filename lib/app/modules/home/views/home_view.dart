@@ -9,7 +9,9 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF207BFF),
       appBar: AppBar(
+<<<<<<< HEAD
         elevation: 0.0,
         backgroundColor: Color(0xFF207BFF),
         title: const Text(
@@ -19,8 +21,16 @@ class HomeView extends GetView<HomeController> {
               fontSize: 30,
               fontFamily: 'Boogaloo',
               fontWeight: FontWeight.w400),
+=======
+        backgroundColor: Color(0xFF207BFF),
+        leading: IconButton(onPressed: () {}, icon: Icon(Icons.info)),
+        title: const Text(
+          'Campus Saga',
+          style: TextStyle(fontFamily: 'Boogaloo', fontSize: 30),
+>>>>>>> 65942bea6606587d9a68479546a8ac6796987e8e
         ),
         centerTitle: true,
+<<<<<<< HEAD
         actions: [
           Obx(
             () => IconButton(
@@ -39,10 +49,14 @@ class HomeView extends GetView<HomeController> {
           icon: Icon(Icons.info),
           onPressed: () {},
         ),
+=======
+        elevation: 0,
+>>>>>>> 65942bea6606587d9a68479546a8ac6796987e8e
       ),
       body: Container(
         height: Get.height,
         width: Get.width,
+<<<<<<< HEAD
         color: Color(0xFF207BFF),
         child: Container(
           padding: EdgeInsets.all(12),
@@ -73,12 +87,63 @@ class HomeView extends GetView<HomeController> {
                 _cards(),
               ],
             ),
+=======
+        padding: EdgeInsets.only(
+          top: 15,
+          left: 15,
+          right: 15,
+        ),
+        decoration: BoxDecoration(
+          color: Colors.white.withOpacity(.5),
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(15),
+            topRight: Radius.circular(15),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 5,
+              blurRadius: 7,
+              offset: Offset(0, -2),
+            ),
+          ],
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              _cardContainer(),
+              SizedBox(
+                height: 15,
+              ),
+              _cardContainer(),
+              SizedBox(
+                height: 15,
+              ),
+              _cardContainer(),
+              SizedBox(
+                height: 15,
+              ),
+              _cardContainer(),
+              SizedBox(
+                height: 15,
+              ),
+              _cardContainer(),
+              SizedBox(
+                height: 15,
+              ),
+              _cardContainer(),
+              SizedBox(
+                height: 15,
+              ),
+            ],
+>>>>>>> 65942bea6606587d9a68479546a8ac6796987e8e
           ),
         ),
       ),
     );
   }
 
+<<<<<<< HEAD
   Widget _cards() {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 8),
@@ -108,6 +173,39 @@ class HomeView extends GetView<HomeController> {
           SizedBox(width: 8),
           Text('nafiz')
         ],
+=======
+  Container _cardContainer() {
+    return Container(
+      padding: EdgeInsets.all(10),
+      height: 200,
+      width: Get.width,
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(.5),
+        borderRadius: BorderRadius.all(
+          Radius.circular(15),
+        ),
+      ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              CircleAvatar(
+                radius: 20,
+                backgroundImage: AssetImage('assets/temp/jenny.png'),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Text("Anonymous"),
+              Spacer(),
+              Checkbox(
+                value: false,
+                onChanged: (bool? newValue) {},
+              )
+            ],
+          )
+        ],
+>>>>>>> 65942bea6606587d9a68479546a8ac6796987e8e
       ),
     );
   }
