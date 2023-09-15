@@ -63,25 +63,18 @@ class HomeView extends GetView<HomeController> {
               )
             ],
           ),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                _cards(),
-                _cards(),
-                _cards(),
-                _cards(),
-                _cards(),
-              ],
-            ),
+          child: ListView(
+            children: usersPostFromServer(),
           ),
         ),
       ),
     );
   }
+//conent cards
 
-  Widget _cards() {
+  Widget _cards(var name, var post) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 8),
+      margin: EdgeInsets.symmetric(vertical: 5),
       alignment: Alignment.topLeft,
       padding: EdgeInsets.all(10),
       height: 250,
@@ -98,17 +91,98 @@ class HomeView extends GetView<HomeController> {
           )
         ],
       ),
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CircleAvatar(
-            radius: 20,
-            backgroundImage: AssetImage("assets/images/facebook.png"),
-            backgroundColor: Color.fromRGBO(255, 255, 255, .5),
+          Row(
+            children: [
+              CircleAvatar(
+                radius: 20,
+                backgroundImage: AssetImage("assets/images/facebook.png"),
+                backgroundColor: Color.fromRGBO(255, 255, 255, .5),
+              ),
+              SizedBox(width: 8),
+              Text(name),
+              Spacer(),
+              Obx(
+                () => Checkbox(
+                    value: Get.find<HomeController>().isChecked.value,
+                    onChanged: (bool? value) {
+                      Get.find<HomeController>().isChecked.value = value!;
+                    }),
+              ),
+            ],
           ),
-          SizedBox(width: 8),
-          Text('nafiz')
+          Text(post),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                    'Content detailsdfgfxgfhfhdfsghhhhggggggggggggggggggggggggggggggggggContent detailsdfgfxgfhfhdfsghhhhgggggggggggggggggggggggggggggggggg'),
+              ),
+              SizedBox(width: 5),
+              Image.asset(
+                'assets/images/facebook.png',
+                height: 80,
+                width: 80,
+                fit: BoxFit
+                    .fill, // This determines how the image fits within the 50x50 box.
+              ),
+              Column(
+                children: [
+                  IconButton(
+                      onPressed: () {
+                        Get.find<HomeController>().upVote.value++;
+                        Get.find<HomeController>().getVoteCount();
+                      },
+                      icon: Icon(Icons.arrow_drop_up)),
+                  IconButton(
+                      onPressed: () {
+                        Get.find<HomeController>().downVote.value++;
+                        Get.find<HomeController>().getVoteCount();
+                      },
+                      icon: Icon(Icons.arrow_drop_down)),
+                ],
+              ),
+            ],
+          ),
+          SizedBox(height: 25),
+          Obx(
+            () => LinearProgressIndicator(
+              backgroundColor: Colors.red,
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
+              value: Get.find<HomeController>().voteCount.value,
+            ),
+          )
         ],
       ),
     );
   }
+
+  List<Widget> usersPostFromServer() {
+    List<Widget> post = [];
+    for (var i = 0; i < name.length; i++) {
+      post.add(_cards(name[i], postMap[i]));
+    }
+    return post;
+  }
 }
+
+List<String> name = ["Zaman", "Nafiz", "Rahim", "Karim", "Rahim", "Karim"];
+List<String> content = [
+  "Sample Post 1",
+  "Sample Post 2",
+  "Sample Post 3",
+  "Sample Post 4",
+  "Sample Post 5",
+  "Sample Post 6"
+];
+//create a map for this name
+Map postMap = {
+  "0": "Sample Post 1",
+  "1": "Sample Post 2",
+  "2": "Sample Post 3",
+  "3": "Sample Post 4",
+  "4": "Sample Post 5",
+  "5": "Sample Post 6"
+};
