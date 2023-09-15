@@ -162,7 +162,7 @@ class HomeView extends GetView<HomeController> {
   List<Widget> usersPostFromServer() {
     List<Widget> post = [];
     for (var i = 0; i < name.length; i++) {
-      post.add(_cards(name[i], postMap[i]));
+      post.add(_cards(name[i], content[i]));
     }
     return post;
   }
@@ -177,12 +177,4 @@ List<String> content = [
   "Sample Post 5",
   "Sample Post 6"
 ];
-//create a map for this name
-Map postMap = {
-  "0": "Sample Post 1",
-  "1": "Sample Post 2",
-  "2": "Sample Post 3",
-  "3": "Sample Post 4",
-  "4": "Sample Post 5",
-  "5": "Sample Post 6"
-};
+
