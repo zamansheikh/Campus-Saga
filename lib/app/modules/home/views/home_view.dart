@@ -168,13 +168,27 @@ class HomeView extends GetView<HomeController> {
   }
 }
 
-List<String> name = ["Zaman", "Nafiz", "Rahim", "Karim", "Rahim", "Karim"];
+List<String> name = [
+  "Zaman",
+  "Nafiz",
+  "Rahim",
+  "Karim",
+  "Rahim",
+  "Karim",
+  "Rahim",
+  "Karim",
+  "Rahim",
+  "Karim"
+];
 List<String> content = [
   "Sample Post 1",
   "Sample Post 2",
   "Sample Post 3",
   "Sample Post 4",
   "Sample Post 5",
-  "Sample Post 6"
+  "Sample Post 6",
+  "Sample Post 7",
+  "Sample Post 8",
+  "Sample Post 9",
+  "Sample Post 10",
 ];
-
