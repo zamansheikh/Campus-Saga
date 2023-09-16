@@ -19,6 +19,30 @@ class BottomBarView extends GetView<BottomBarController> {
           style: TextStyle(fontSize: 20),
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+              backgroundColor: Colors.blue),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.campaign),
+            label: 'Promotion',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add_circle_rounded),
+            label: 'Add Post',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'Promotion',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.manage_accounts),
+            label: 'Ranking',
+          ),
+        ],
+      ),
     );
   }
 }
