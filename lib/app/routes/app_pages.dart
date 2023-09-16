@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/add_post/bindings/add_post_binding.dart';
 import '../modules/add_post/views/add_post_view.dart';
+import '../modules/bottom_bar/bindings/bottom_bar_binding.dart';
+import '../modules/bottom_bar/views/bottom_bar_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -14,6 +16,7 @@ import '../modules/ranking/bindings/ranking_binding.dart';
 import '../modules/ranking/views/ranking_view.dart';
 import '../modules/sign_up/bindings/sign_up_binding.dart';
 import '../modules/sign_up/views/sign_up_view.dart';
+
 part 'app_routes.dart';
 
 class AppPages {
@@ -56,6 +59,11 @@ class AppPages {
       name: _Paths.SIGN_UP,
       page: () => const SignUpView(),
       binding: SignUpBinding(),
+    ),
+    GetPage(
+      name: _Paths.BOTTOM_BAR,
+      page: () => const BottomBarView(),
+      binding: BottomBarBinding(),
     ),
   ];
 }
