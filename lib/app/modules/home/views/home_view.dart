@@ -1,3 +1,4 @@
+import 'package:campus_saga/app/modules/bottom_bar/views/bottom_bar_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -9,6 +10,8 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
+      bottomNavigationBar: BottomBarView(),
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Color(0xFF207BFF),
@@ -49,7 +52,7 @@ class HomeView extends GetView<HomeController> {
           height: Get.height,
           width: Get.width,
           decoration: BoxDecoration(
-            color: Color.fromRGBO(255, 255, 255, .5),
+            color: Colors.white.withOpacity(0.5),
             borderRadius: BorderRadius.only(
               topRight: Radius.circular(15),
               topLeft: Radius.circular(15),
@@ -80,7 +83,7 @@ class HomeView extends GetView<HomeController> {
       height: 250,
       width: Get.width,
       decoration: BoxDecoration(
-        color: Color.fromRGBO(255, 255, 255, .5),
+        color: Colors.white.withOpacity(0.5),
         borderRadius: BorderRadius.all(Radius.circular(15)),
         boxShadow: [
           BoxShadow(
@@ -99,7 +102,7 @@ class HomeView extends GetView<HomeController> {
               CircleAvatar(
                 radius: 20,
                 backgroundImage: AssetImage("assets/images/facebook.png"),
-                backgroundColor: Color.fromRGBO(255, 255, 255, .5),
+                backgroundColor: Colors.white.withOpacity(0.5),
               ),
               SizedBox(width: 8),
               Text(name),
