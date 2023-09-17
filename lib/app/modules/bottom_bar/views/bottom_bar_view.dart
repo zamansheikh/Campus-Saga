@@ -20,7 +20,7 @@ class BottomBarView extends GetView<BottomBarController> {
         ),
         child: BottomNavigationBar(
           iconSize: 30,
-          selectedItemColor: const Color.fromARGB(255, 172, 36, 36),
+          selectedItemColor: Color(0xFF207BFF),
           unselectedItemColor: Colors.black,
           items: [
             BottomNavigationBarItem(
