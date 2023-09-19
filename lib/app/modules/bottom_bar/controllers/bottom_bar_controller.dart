@@ -1,7 +1,11 @@
 import 'package:get/get.dart';
 
 class BottomBarController extends GetxController {
-  //TODO: Implement BottomBarController
+  var currentIndex = 0.obs;
+  void changePage(index) {
+    currentIndex.value = index;
+    update();
+  }
 
   final count = 0.obs;
   @override

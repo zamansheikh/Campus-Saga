@@ -10,7 +10,6 @@ class ProfileView extends GetView<ProfileController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomBarView(),
       appBar: AppBar(
         title: const Text('ProfileView'),
         centerTitle: true,

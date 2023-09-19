@@ -10,7 +10,6 @@ class RankingView extends GetView<RankingController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomBarView(),
       appBar: AppBar(
         title: const Text('RankingView'),
         centerTitle: true,

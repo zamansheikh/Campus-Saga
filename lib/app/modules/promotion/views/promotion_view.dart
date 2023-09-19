@@ -10,7 +10,6 @@ class PromotionView extends GetView<PromotionController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomBarView(),
       appBar: AppBar(
         title: const Text('PromotionView'),
         centerTitle: true,

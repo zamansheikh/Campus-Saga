@@ -22,47 +22,47 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
+  static const INITIAL = Routes.BOTTOM_BAR;
 
   static final routes = [
     GetPage(
       name: _Paths.HOME,
-      page: () => const HomeView(),
+      page: () => HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
       name: _Paths.PROMOTION,
-      page: () => const PromotionView(),
+      page: () => PromotionView(),
       binding: PromotionBinding(),
     ),
     GetPage(
       name: _Paths.ADD_POST,
-      page: () => const AddPostView(),
+      page: () => AddPostView(),
       binding: AddPostBinding(),
     ),
     GetPage(
       name: _Paths.RANKING,
-      page: () => const RankingView(),
+      page: () => RankingView(),
       binding: RankingBinding(),
     ),
     GetPage(
       name: _Paths.PROFILE,
-      page: () => const ProfileView(),
+      page: () => ProfileView(),
       binding: ProfileBinding(),
     ),
     GetPage(
       name: _Paths.LOGIN,
-      page: () => const LoginView(),
+      page: () => LoginView(),
       binding: LoginBinding(),
     ),
     GetPage(
       name: _Paths.SIGN_UP,
-      page: () => const SignUpView(),
+      page: () => SignUpView(),
       binding: SignUpBinding(),
     ),
     GetPage(
       name: _Paths.BOTTOM_BAR,
-      page: () => const BottomBarView(),
+      page: () => BottomBarView(),
       binding: BottomBarBinding(),
     ),
   ];

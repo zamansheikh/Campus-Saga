@@ -1,4 +1,3 @@
-import 'package:campus_saga/app/modules/bottom_bar/views/bottom_bar_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -6,12 +5,12 @@ import 'package:get/get.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
-  const HomeView({Key? key}) : super(key: key);
+  final homeController = Get.put(HomeController());
+  HomeView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      bottomNavigationBar: BottomBarView(),
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Color(0xFF207BFF),
@@ -28,11 +27,11 @@ class HomeView extends GetView<HomeController> {
           Obx(
             () => IconButton(
               onPressed: () {
-                Get.find<HomeController>().isDark.toggle();
+                homeController.isDark.toggle();
                 Get.changeTheme(
                     Get.isDarkMode ? ThemeData.light() : ThemeData.dark());
               },
-              icon: Icon((Get.find<HomeController>().isDark.value)
+              icon: Icon((homeController.isDark.value)
                   ? Icons.light_mode
                   : Icons.dark_mode),
             ),
@@ -109,9 +108,9 @@ class HomeView extends GetView<HomeController> {
               Spacer(),
               Obx(
                 () => Checkbox(
-                    value: Get.find<HomeController>().isChecked.value,
+                    value: homeController.isChecked.value,
                     onChanged: (bool? value) {
-                      Get.find<HomeController>().isChecked.value = value!;
+                      homeController.isChecked.value = value!;
                     }),
               ),
             ],
@@ -135,14 +134,14 @@ class HomeView extends GetView<HomeController> {
                 children: [
                   IconButton(
                       onPressed: () {
-                        Get.find<HomeController>().upVote.value++;
-                        Get.find<HomeController>().getVoteCount();
+                        homeController.upVote.value++;
+                        homeController.getVoteCount();
                       },
                       icon: Icon(Icons.arrow_drop_up)),
                   IconButton(
                       onPressed: () {
-                        Get.find<HomeController>().downVote.value++;
-                        Get.find<HomeController>().getVoteCount();
+                        homeController.downVote.value++;
+                        homeController.getVoteCount();
                       },
                       icon: Icon(Icons.arrow_drop_down)),
                 ],
@@ -154,7 +153,7 @@ class HomeView extends GetView<HomeController> {
             () => LinearProgressIndicator(
               backgroundColor: Colors.red,
               valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
-              value: Get.find<HomeController>().voteCount.value,
+              value: homeController.voteCount.value,
             ),
           )
         ],

@@ -10,7 +10,6 @@ class LoginView extends GetView<LoginController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomBarView(),
       appBar: AppBar(
         title: const Text('LoginView'),
         centerTitle: true,
