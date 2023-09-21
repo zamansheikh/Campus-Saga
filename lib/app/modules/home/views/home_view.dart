@@ -12,7 +12,7 @@ class HomeView extends GetView<HomeController> {
     return Scaffold(
       extendBody: true,
       appBar: AppBar(
-        elevation: 0.0,
+        elevation: 0,
         backgroundColor: Color(0xFF207BFF),
         title: const Text(
           'Campus Saga',

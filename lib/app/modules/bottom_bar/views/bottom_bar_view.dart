@@ -69,6 +69,7 @@ class BottomBarView extends GetView<BottomBarController> {
                   ),
                 ],
                 onTap: controller.changePage,
+                type: BottomNavigationBarType.shifting,
               );
             },
           ),
