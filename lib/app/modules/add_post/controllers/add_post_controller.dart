@@ -1,6 +1,13 @@
 import 'package:get/get.dart';
 
 class AddPostController extends GetxController {
+ 
+ RxString selectedPostType = 'Post Type'.obs;
+ RxList<String> postType = [
+    'Issue',
+    'Promotional',
+   
+  ].obs;
 
   final count = 0.obs;
   @override
