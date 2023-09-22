@@ -79,6 +79,7 @@ class AddPostView extends GetView<AddPostController> {
                 height: 10,
               ),
               TextFormField(
+                maxLength: 100,
                 decoration: InputDecoration(
                   label: Text('Tilte'),
                   hintStyle: TextStyle(
@@ -95,6 +96,7 @@ class AddPostView extends GetView<AddPostController> {
                 height: 10,
               ),
               TextFormField(
+                maxLines: 5,
                 decoration: InputDecoration(
                   label: Text('Description'),
                   hintStyle: TextStyle(
