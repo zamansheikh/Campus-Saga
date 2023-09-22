@@ -96,36 +96,49 @@ class PromotionView extends GetView<PromotionController> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          //user name & profile
           Row(
             children: [
+              //profile
               CircleAvatar(
                 radius: 20,
                 backgroundImage: AssetImage("assets/images/facebook.png"),
                 backgroundColor: Colors.white.withOpacity(0.5),
               ),
               SizedBox(width: 8),
-              Text(name),
+              Text(
+                name,
+                maxLines: 1,
+              ),
               Spacer(),
             ],
           ),
-          Text(post),
+          Text(
+            post,
+            maxLines: 1,
+          ),
           Row(
             children: [
               Expanded(
                 child: Text(
-                    'Content detailsdfgfxgfhfhdfsghhhhggggggggggggggggggggggggggggggggggContent detailsdfgfxgfhfhdfsghhhhgggggggggggggggggggggggggggggggggg'),
+                  'Content ggggdfsghhhhggggggdfsghhhhgggggdfsghhhhgggggdfsghhhhhgggggdfsghhhhgggggdfsghhhhhgggggdfsghhhhgggggdfsghhhhhgggggdfsghhhhgggggdfsghhhhhgggggdfsghhhhgggggdfsghhhhhgggggdfsghhhhgggggdfsghhhhhgggggdfsghhhhgggggdfsghhhhhgggggdfsghhhhgggggdfsghhhhhgggggdfsghhhhgggggdfsghhhhhgggggdfsghhhhgggggdfsghhhhgggggdfsghhhhgggggdfsghhhhgggggdfsghhhhgggggdfsghhhhgggggdfsghhhhggggggggggggggg',
+                  maxLines: 4,
+                ),
               ),
-              SizedBox(width: 5),
+            ],
+          ),
+          SizedBox(height: 5),
+          Row(
+            children: [
               Image.asset(
                 'assets/images/facebook.png',
-                height: 80,
-                width: 80,
+                height: 105,
+                width: 348,
                 fit: BoxFit
                     .fill, // This determines how the image fits within the 50x50 box.
               ),
             ],
           ),
-          SizedBox(height: 25),
         ],
       ),
     );
