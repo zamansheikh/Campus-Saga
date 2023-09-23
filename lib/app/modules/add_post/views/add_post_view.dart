@@ -109,6 +109,28 @@ class AddPostView extends GetView<AddPostController> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 5),
+                alignment: Alignment.topLeft,
+                padding: EdgeInsets.all(10),
+                height: 250,
+                width: Get.width,
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.5),
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color(0x19000000),
+                      blurRadius: 8,
+                      offset: Offset(0, 1),
+                      spreadRadius: 2,
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
           padding: EdgeInsets.all(12),
